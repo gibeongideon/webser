@@ -1,0 +1,364 @@
+
+{% extends "./base1.html" %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% block body_class %}template-blogindexpage{% endblock %}
+
+{% block content %}
+
+
+<div class="section-row">
+<h3>Recent Posts</h3>
+<div class="post post-widget">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/widget-2.jpg" alt=""></a>
+<div class="post-body">
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+</div>
+</div>
+<div class="post post-widget">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/widget-3.jpg" alt=""></a>
+<div class="post-body">
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Why Node.js Is The Coolest Kid On The Backend Development Block!</a></h3>
+</div>
+</div>
+<div class="post post-widget">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/widget-4.jpg" alt=""></a>
+<div class="post-body">
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Tell-A-Tool: Guide To Web Design And Development Tools</a></h3>
+</div>
+</div>
+</div>
+
+
+<div class="section-row">
+<h3>Follow us</h3>
+<ul class="nav-aside-social">
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-twitter"></i></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-pinterest"></i></a></li>
+</ul>
+</div>
+
+
+<button class="nav-aside-close"><i class="fa fa-times"></i></button>
+
+</div>
+
+</div>
+
+
+<div id="post-header" class="page-header">
+{% image page.image1  original  as tmp_photo %}
+<div class="background-img" style="background-image: url( {{ tmp_photo.url }} );"></div>
+<div class="container">
+<div class="row">
+<div class="col-md-10">
+<div class="post-meta">
+<a class="post-category cat-2" href=/">JavaScript</a>
+<span class="post-date">{{ page.date }}</span>
+</div>
+<h1>{{ page.title }}</h1>
+</div>
+</div>
+</div>
+</div>
+
+</header>
+
+
+<div class="section">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-8">
+<div class="section-row sticky-container">
+<div class="main-post">
+
+
+{{ page.body|richtext }}
+
+
+
+</div>
+<p><a href="{{ page.get_parent.url }}">Return to blogs</a></p>
+
+<div class="post-shares sticky-shares" style="position: absolute; top: 0px; left: 0px;">
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="share-facebook"><i class="fa fa-facebook"></i></a>
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="share-twitter"><i class="fa fa-twitter"></i></a>
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="share-google-plus"><i class="fa fa-google-plus"></i></a>
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="share-pinterest"><i class="fa fa-pinterest"></i></a>
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="share-linkedin"><i class="fa fa-linkedin"></i></a>
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-envelope"></i></a>
+</div>
+</div>
+
+<div class="section-row text-center">
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" style="display: inline-block;margin: auto;">
+<img class="img-responsive" src="/static/ad-2.jpg" alt="">
+</a>
+</div>
+
+
+<div class="section-row">
+<div class="post-author">
+<div class="media">
+<div class="media-left">
+<img class="media-object" src="/static/author.png" alt="">
+</div>
+<div class="media-body">
+<div class="media-heading">
+<h3>John Doe</h3>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<ul class="author-social">
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-twitter"></i></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#"><i class="fa fa-instagram"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="section-row">
+<div class="section-title">
+<h2>3 Comments</h2>
+</div>
+<div class="post-comments">
+
+<div class="media">
+<div class="media-left">
+<img class="media-object" src="/static/avatar.png" alt="">
+</div>
+<div class="media-body">
+<div class="media-heading">
+<h4>John Doe</h4>
+<span class="time">March 27, 2018 at 8:00 am</span>
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="reply">Reply</a>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<div class="media">
+<div class="media-left">
+<img class="media-object" src="/static/avatar.png" alt="">
+</div>
+<div class="media-body">
+<div class="media-heading">
+<h4>John Doe</h4>
+<span class="time">March 27, 2018 at 8:00 am</span>
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="reply">Reply</a>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="media">
+<div class="media-left">
+<img class="media-object" src="/static/avatar.png" alt="">
+</div>
+<div class="media-body">
+<div class="media-heading">
+<h4>John Doe</h4>
+<span class="time">March 27, 2018 at 8:00 am</span>
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="reply">Reply</a>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="section-row">
+<div class="section-title">
+<h2>Leave a reply</h2>
+<p>your email address will not be published. required fields are marked *</p>
+</div>
+<form class="post-reply">
+<div class="row">
+<div class="col-md-4">
+<div class="form-group">
+<span>Name *</span>
+<input class="input" type="text" name="name">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<span>Email *</span>
+<input class="input" type="email" name="email">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<span>Website</span>
+<input class="input" type="text" name="website">
+</div>
+</div>
+<div class="col-md-12">
+<div class="form-group">
+<textarea class="input" name="message" placeholder="Message" data-gramm="false" wt-ignore-input="true"></textarea>
+</div>
+<button class="primary-button">Submit</button>
+</div>
+</div>
+</form>
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="aside-widget text-center">
+<a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" style="display: inline-block;margin: auto;">
+<img class="img-responsive" src="/static/ad-1.jpg" alt="">
+</a>
+</div>
+
+
+<div class="aside-widget">
+<div class="section-title">
+<h2>Most Read</h2>
+</div>
+<div class="post post-widget">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/widget-1.jpg" alt=""></a>
+<div class="post-body">
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Tell-A-Tool: Guide To Web Design And Development Tools</a></h3>
+</div>
+</div>
+<div class="post post-widget">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/widget-2.jpg" alt=""></a>
+<div class="post-body">
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+</div>
+</div>
+<div class="post post-widget">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/widget-3.jpg" alt=""></a>
+<div class="post-body">
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Why Node.js Is The Coolest Kid On The Backend Development Block!</a></h3>
+</div>
+</div>
+<div class="post post-widget">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/widget-4.jpg" alt=""></a>
+<div class="post-body">
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Tell-A-Tool: Guide To Web Design And Development Tools</a></h3>
+</div>
+</div>
+</div>
+
+
+<div class="aside-widget">
+<div class="section-title">
+<h2>Featured Posts</h2>
+</div>
+<div class="post post-thumb">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/post-2.jpg" alt=""></a>
+<div class="post-body">
+<div class="post-meta">
+<a class="post-category cat-3" href="https://preview.colorlib.com/theme/webmag/blog-post.html#">Jquery</a>
+<span class="post-date">March 27, 2018</span>
+</div>
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Ask HN: Does Anybody Still Use JQuery?</a></h3>
+</div>
+</div>
+<div class="post post-thumb">
+<a class="post-img" href="https://preview.colorlib.com/theme/webmag/blog-post.html"><img src="/static/post-1.jpg" alt=""></a>
+<div class="post-body">
+<div class="post-meta">
+<a class="post-category cat-2" href="https://preview.colorlib.com/theme/webmag/blog-post.html#">JavaScript</a>
+<span class="post-date">March 27, 2018</span>
+</div>
+<h3 class="post-title"><a href="https://preview.colorlib.com/theme/webmag/blog-post.html">Chrome Extension Protects Against JavaScript-Based CPU Side-Channel Attacks</a></h3>
+</div>
+</div>
+</div>
+
+
+
+{% with categories=page.categories.all %}
+    {% if categories %}
+        <h3>Posted in:</h3>
+        <ul>
+            {% for category in categories %}
+                <li style="display: inline">
+                    {{ category.name }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+
+
+
+<div class="aside-widget">
+<div class="section-title">
+<h2>Catagories</h2>
+</div>
+<div class="category-widget">
+<ul>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="cat-1">Web Design<span>340</span></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="cat-2">JavaScript<span>74</span></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="cat-4">JQuery<span>41</span></a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#" class="cat-3">CSS<span>35</span></a></li>
+</ul>
+</div>
+</div>
+
+
+
+
+{% if page.tags.all.count %}
+<div class="aside-widget">
+<div class="tags-widget">
+
+<ul>
+{% for tag in page.tags.all %}
+<li><a href="{% slugurl 'tags' %}?tag={{ tag }}">{{ tag }}</a></li>
+{% endfor %}
+
+
+
+</ul>
+</div>
+</div>
+{% endif %}
+
+<div class="aside-widget">
+<div class="section-title">
+<h2>Archive</h2>
+</div>
+<div class="archive-widget">
+<ul>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#">January 2018</a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#">Febuary 2018</a></li>
+<li><a href="https://preview.colorlib.com/theme/webmag/blog-post.html#">March 2018</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+{% endblock %}
+
